@@ -11,102 +11,200 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">WebSnape by Yvan</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" onclick="showSection('home')">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showSection('services')">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showSection('portfolio')">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showSection('faq')">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="showSection('contact')">Contact</a>
-                    </li>
-                </ul>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#" data-lang="nav-brand">WebSnape by Yvan</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" onclick="showSection('home')" data-lang="nav-home">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('services')" data-lang="nav-services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('portfolio')" data-lang="nav-portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('faq')" data-lang="nav-faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('contact')" data-lang="nav-contact">Contact</a>
+                </li>
+            </ul>
+           <!-- Language Selector -->
+<div class="dropdown ms-3">
+    <button class="btn btn-secondary dropdown-toggle custom-lang-btn" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-globe"></i> Language
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">🇫🇷 Français </a></li>
+        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
+        <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">🇩🇪 Deutsch</a></li>
+    </ul>
+</div>
+            
         </div>
-    </nav>
+        </div>
+    </div>
+</nav>
+
 
     <!-- Sections -->
     <main class="container mt-5">
-        <!-- Hero Section (Home) -->
-        <section id="home" class="content-section hero-section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right">
-                        <h1 class="display-4">Transformez vos idées en sites web captivants</h1>
-                        <p class="lead">WebSnape by Yvan crée des sites web sur mesure pour entreprises, portfolios et plus encore.</p>
-                        <a href="#" class="btn btn-primary btn-lg mt-3" onclick="showSection('services')">Découvrez nos services</a>
-                    </div>
-                    <div class="col-lg-5" data-aos="fade-left">
-                        <img src="https://www.spreadsheetweb.com/wp-content/uploads/2018/08/Utilizing-Web-Services-in-Excel-using-Formulas-1080x675.jpg" class="img-fluid rounded" alt="Innovation Image">
-                    </div>
-                </div>
+      <!-- Hero Section (Home) -->
+<section id="home" class="content-section hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right">
+                <h1 class="display-4" style="font-weight: bold; color: #ffffff;" data-translate="home-title">Transformez vos idées en sites web captivants</h1>
+                <p class="lead" style="font-size: 1.2rem; color: #f8f9fa;" data-translate="home-description">WebSnape by Yvan crée des sites web sur mesure pour entreprises, portfolios et plus encore.</p>
+                <a href="#services" class="btn btn-primary btn-lg mt-3" onclick="showSection('services')" style="border-radius: 25px; padding: 10px 30px;" data-translate="home-button">Découvrez nos services</a>
             </div>
-            <div class="hero-overlay"></div>
-        </section>
+            <div class="col-lg-5" data-aos="fade-left">
+                <img src="https://www.spreadsheetweb.com/wp-content/uploads/2018/08/Utilizing-Web-Services-in-Excel-using-Formulas-1080x675.jpg" class="img-fluid rounded" alt="Innovation Image">
+            </div>
+        </div>
+    </div>
+    <div class="hero-overlay"></div>
+</section>
 
-        <!-- Services Section -->
-        <section id="services" class="content-section" style="display: none;" data-aos="fade-up">
-            <h2>Nos Services</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service-box" data-aos="flip-left">
-                        <div class="icon-box">
-                            <i class="fas fa-laptop-code icon"></i>
-                        </div>
-                        <h3>Sites Web Professionnels</h3>
-                        <p>Nous concevons des sites pour les entreprises de toutes tailles, avec une attention particulière aux détails et à l'expérience utilisateur.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box" data-aos="flip-left" data-aos-delay="100">
-                        <div class="icon-box">
-                            <i class="fas fa-user-tie icon"></i>
-                        </div>
-                        <h3>Portfolios Personnels</h3>
-                        <p>Présentez vos talents avec un portfolio en ligne élégant et personnalisé.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box" data-aos="flip-left" data-aos-delay="200">
-                        <div class="icon-box">
-                            <i class="fas fa-camera-retro icon"></i>
-                        </div>
-                        <h3>Sites Familiaux</h3>
-                        <p>Créez une galerie numérique de souvenirs pour les générations à venir.</p>
-                    </div>
+<!-- New Presentation Section -->
+<section id="why-us" class="bg-light py-5" style="display: none;">
+    <div class="container">
+        <h2 class="text-center text-primary" style="font-weight: bold;" data-translate="why-title" data-aos="fade-right">Pourquoi choisir WebSnape ?</h2>
+        <p class="text-center text-muted mb-5" style="font-size: 1.2rem;" data-translate="why-description" data-aos="fade-right" data-aos-delay="100">Découvrez ce qui fait de WebSnape by Yvan votre meilleur partenaire pour tous vos besoins en création de sites web.</p>
+        
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-handshake icon"></i>
+                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-client">Proximité avec le client et communication</h3>
+                    <p style="font-size: 1.1rem;" data-translate="why-client-description">Chez WebSnape, nous croyons en une communication amicale et respectueuse. Nous sommes à vos côtés à chaque étape pour vous offrir un service personnalisé.</p>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-md-12 text-center">
-                    <h3>Votre design, notre expertise</h3>
-                    <p>Envoyez-nous votre esquisse sur papier, nous nous occupons du reste. Avec WebSnape by Yvan, votre site est façonné selon vos désirs.</p>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-cogs icon"></i>
+                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-flexibility">Flexibilité des fonctionnalités</h3>
+                    <p style="font-size: 1.1rem;" data-translate="why-flexibility-description">Vous avez le contrôle total sur les fonctionnalités de votre site. Ajoutez ou retirez des options selon vos besoins. Le client est roi chez WebSnape.</p>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-paint-brush icon"></i>
+                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-design">Personnalisation et design unique</h3>
+                    <p style="font-size: 1.1rem;" data-translate="why-design-description">Imaginez votre propre design ou décrivez-le-nous, et nous vous livrerons une page web parfaitement adaptée à vos attentes, avec un délai de traitement rapide.</p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-expand-arrows-alt icon"></i>
+                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-scalability">Évolutivité de votre site</h3>
+                    <p style="font-size: 1.1rem;" data-translate="why-scalability-description">Si votre entreprise se développe, nous pouvons intégrer des fonctionnalités plus poussées pour répondre à vos nouveaux besoins.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fas fa-key icon"></i>
+                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-ownership">Propriété totale du code</h3>
+                    <p style="font-size: 1.1rem;" data-translate="why-ownership-description">Vous êtes le propriétaire de votre site, sans aucune location. WebSnape gère l'hébergement, la sécurité, et reste disponible pour toute amélioration.</p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="600">
+                    <i class="fas fa-heart icon"></i>
+                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-partner">Votre partenaire idéal</h3>
+                    <p style="font-size: 1.1rem;" data-translate="why-partner-description">WebSnape est le partenaire idéal pour vous accompagner dans votre aventure numérique, en vous offrant un service sur mesure et un support continu.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="600">
+            <a href="#" onclick="showSection('contact')"  class="btn btn-primary btn-lg" data-translate="why-contact-button">Contactez-nous dès aujourd'hui</a>
+        </div>
+        
+    </div>
+</section>
+
+
+        
+        
+
+       <!-- Services Section -->
+<section id="services" class="content-section" style="display: none;" data-aos="fade-up">
+    <h2 data-lang="services-title">Nos Services</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="service-box" data-aos="flip-left">
+                <div class="icon-box">
+                    <i class="fas fa-laptop-code icon"></i>
+                </div>
+                <h3 data-lang="services-title-1">Sites Web Professionnels</h3>
+                <p data-lang="services-description-1">Nous concevons des sites pour les entreprises de toutes tailles, avec une attention particulière aux détails et à l'expérience utilisateur.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-box" data-aos="flip-left" data-aos-delay="100">
+                <div class="icon-box">
+                    <i class="fas fa-user-tie icon"></i>
+                </div>
+                <h3 data-lang="services-title-2">Portfolios Personnels</h3>
+                <p data-lang="services-description-2">Présentez vos talents avec un portfolio en ligne élégant et personnalisé.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="service-box" data-aos="flip-left" data-aos-delay="200">
+                <div class="icon-box">
+                    <i class="fas fa-camera-retro icon"></i>
+                </div>
+                <h3 data-lang="services-title-3">Sites Familiaux</h3>
+                <p data-lang="services-description-3">Créez une galerie numérique de souvenirs pour les générations à venir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5 expertise-section">
+        <div class="col-md-12 text-center">
+            <h3 data-lang="expertise-title" class="section-title">Votre design, notre expertise</h3>
+            <p data-lang="expertise-description" class="section-description">
+                Envoyez-nous votre esquisse sur papier, nous nous occupons du reste. Avec WebSnape by Yvan, votre site est façonné selon vos désirs.
+            </p>
+        </div>
+    </div>
+    <div class="row mt-5 advanced-features-section">
+        <div class="col-md-12 text-center">
+            <h3 data-lang="additional-features-title" class="section-title">Fonctionnalités Avancées</h3>
+            <p data-lang="additional-features-description" class="section-description">
+                Enrichissez votre site avec des fonctionnalités telles que l'intégration d'un calendrier en ligne pour gérer les réservations, la mise en place de systèmes de réservation en ligne, la création de formulaires de contact personnalisés, le paiement en ligne via PayPal, la configuration d'options de création de compte, et bien d'autres encore. Explorez ce qui est possible pour répondre aux besoins spécifiques de votre entreprise.
+            </p>
+        </div>
+    </div>
+    
+</section>
+
 
         <!-- Portfolio Section -->
         <section id="portfolio" class="content-section" data-aos="fade-up">
-            <h2>Notre Portfolio</h2>
+            <h2 data-lang="portfolio-title">Notre Portfolio</h2>
+            
+            <div class="alert alert-info text-center" style="font-size: 1.1rem; font-weight: bold;" data-lang="demo-alert">
+                Ces sites sont des maquettes démonstratives. Les fonctionnalités seront ajoutées en fonction des besoins de chaque client. N'hésitez pas à y jeter un œil pour voir ce qui est possible !
+            </div>
+            
+            
+            
 
             <!-- Online Shops Section -->
             <div class="portfolio-category mt-5 p-4 rounded bg-light">
-                <h3 class="text-center text-primary">Boutiques en ligne pour vos entreprises</h3>
-                <p class="text-center text-muted">Nous créons des boutiques en ligne modernes et fonctionnelles, adaptées à toutes les tailles d'entreprise. Que vous soyez une petite startup ou une grande entreprise, nous avons la solution pour vous.</p>
+                <h3 class="text-center text-primary" data-lang="portfolio-shop-title">Boutiques en ligne pour vos entreprises</h3>
+                <p class="text-center text-muted" data-lang="portfolio-shop-description">Nous créons des boutiques en ligne modernes et fonctionnelles, adaptées à toutes les tailles d'entreprise. Que vous soyez une petite startup ou une grande entreprise, nous avons la solution pour vous.</p>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="portfolio-item">
@@ -114,8 +212,8 @@
                                 <div class="portfolio-image">
                                     <img src="img/deliciousDine.png" class="img-fluid rounded" alt="Online Shop 1">
                                     <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Page en ligne d'un restaurant</h5>
-                                        <p>Un site en ligne permettant aux petites entreprises de presenter leurs services.</p>
+                                        <h5 class="mt-2" data-lang="shop-item-1-title">Page en ligne d'un restaurant</h5>
+                                        <p data-lang="shop-item-1-description">Un site en ligne permettant aux petites entreprises de présenter leurs services.</p>
                                     </div>
                                 </div>
                             </a>
@@ -128,8 +226,8 @@
                                 <div class="portfolio-image">
                                     <img src="img/sweet_treats.png" class="img-fluid rounded" alt="Online Shop 1">
                                     <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Page en ligne d'un commerce de patisserie</h5>
-                                        <p>Un site en ligne permettant aux petites entreprises ou particuliers de presenter leurs produits sur une page moderne.</p>
+                                        <h5 class="mt-2" data-lang="shop-item-2-title">Page en ligne d'un commerce de pâtisserie</h5>
+                                        <p data-lang="shop-item-2-description">Un site en ligne permettant aux petites entreprises ou particuliers de présenter leurs produits sur une page moderne.</p>
                                     </div>
                                 </div>
                             </a>
@@ -142,8 +240,8 @@
                                 <div class="portfolio-image">
                                     <img src="img/luxeSalon.png" class="img-fluid rounded" alt="Online Shop 1">
                                     <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Page en ligne d'un Salon de coiffure</h5>
-                                        <p>Un site en ligne présentant un salon et les differents modeles disponibles, site aussi adapté aux particuliers.</p>
+                                        <h5 class="mt-2" data-lang="shop-item-3-title">Page en ligne d'un Salon de coiffure</h5>
+                                        <p data-lang="shop-item-3-description">Un site en ligne présentant un salon et les différents modèles disponibles, site aussi adapté aux particuliers.</p>
                                     </div>
                                 </div>
                             </a>
@@ -156,14 +254,13 @@
                                 <div class="portfolio-image">
                                     <img src="img/premiumPhone.png" class="img-fluid rounded" alt="Online Shop 1">
                                     <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Page en ligne d'une boutique de Iphone</h5>
-                                        <p>Un site en ligne parfait pour du E-Commerce de telephone pour boutique ou particuliers.</p>
+                                        <h5 class="mt-2" data-lang="shop-item-4-title">Page en ligne d'une boutique de téléphones</h5>
+                                        <p data-lang="shop-item-4-description">Un site en ligne parfait pour du E-Commerce de téléphone pour boutique ou particuliers.</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-
 
                     <div class="col-md-4">
                         <div class="portfolio-item">
@@ -171,21 +268,20 @@
                                 <div class="portfolio-image">
                                     <img src="img/fashionhub.png" class="img-fluid rounded" alt="Online Shop 1">
                                     <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Exemple d'une page en ligne un peu plus poussee.</h5>
-                                        <p>Un site en ligne reservee aux business plus grands et demandant plus de fonctionalites .</p>
+                                        <h5 class="mt-2" data-lang="shop-item-5-title">Exemple d'une page en ligne plus avancée</h5>
+                                        <p data-lang="shop-item-5-description">Un site en ligne réservé aux business plus grands et demandant plus de fonctionnalités.</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <!-- Add more projects for online shops as needed -->
                 </div>
             </div>
 
             <!-- Portfolios Section -->
             <div class="portfolio-category mt-5 p-4 rounded bg-light">
-                <h3 class="text-center text-primary">Portfolios pour vos demandes d'emploi</h3>
-                <p class="text-center text-muted">Impressionnez vos employeurs potentiels avec un portfolio en ligne élégant et personnalisé. Nous créons des plateformes qui mettent en valeur vos compétences et expériences.</p>
+                <h3 class="text-center text-primary" data-lang="portfolio-title-2">Portfolios pour vos demandes d'emploi</h3>
+                <p class="text-center text-muted" data-lang="portfolio-description-2">Impressionnez vos employeurs potentiels avec un portfolio en ligne élégant et personnalisé. Nous créons des plateformes qui mettent en valeur vos compétences et expériences.</p>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="portfolio-item">
@@ -193,8 +289,8 @@
                                 <div class="portfolio-image">
                                     <img src="img/portfolio1.png" class="img-fluid rounded" alt="Portfolio 1">
                                     <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Portfolio pour un etudiant en informatique</h5>
-                                        <p>Un site web osé et futuriste .</p>
+                                        <h5 class="mt-2" data-lang="portfolio-item-1-title">Portfolio pour un étudiant en informatique</h5>
+                                        <p data-lang="portfolio-item-1-description">Un site web osé et futuriste.</p>
                                     </div>
                                 </div>
                             </a>
@@ -207,8 +303,8 @@
                                 <div class="portfolio-image">
                                     <img src="img/portfolio2.png" class="img-fluid rounded" alt="Portfolio 1">
                                     <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Portfolio pour un etudiant en Électrotechnique </h5>
-                                        <p>Un site web professionnel et sobre .</p>
+                                        <h5 class="mt-2" data-lang="portfolio-item-2-title">Portfolio pour un étudiant en électrotechnique</h5>
+                                        <p data-lang="portfolio-item-2-description">Un site web professionnel et sobre.</p>
                                     </div>
                                 </div>
                             </a>
@@ -216,29 +312,25 @@
                     </div>
 
                     <div class="col-md-4">
-                            <div class="portfolio-item">
-                                <a href="https://portfolio3-three-vert.vercel.app/" target="_blank">
-                                    <div class="portfolio-image">
-                                        <img src="img/portfolio3.png" class="img-fluid rounded" alt="Portfolio 1">
-                                        <div class="portfolio-overlay">
-                                            <h5 class="mt-2">Portfolio pour une etudiante en economie</h5>
-                                            <p>Un site web moderne et attrayant .</p>
-                                        </div>
+                        <div class="portfolio-item">
+                            <a href="https://portfolio3-three-vert.vercel.app/" target="_blank">
+                                <div class="portfolio-image">
+                                    <img src="img/portfolio3.png" class="img-fluid rounded" alt="Portfolio 1">
+                                    <div class="portfolio-overlay">
+                                        <h5 class="mt-2" data-lang="portfolio-item-3-title">Portfolio pour une étudiante en économie</h5>
+                                        <p data-lang="portfolio-item-3-description">Un site web moderne et attrayant.</p>
                                     </div>
-                                </a>
-                            </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-
-                   
-                    <!-- Add more projects for portfolios as needed -->
                 </div>
             </div>
 
             <!-- Family Pages Section -->
             <div class="portfolio-category mt-5 p-4 rounded bg-light">
-                <h3 class="text-center text-primary">Pages familiales pour conserver vos souvenirs</h3>
-                <p class="text-center text-muted">Conservez vos souvenirs précieux avec des pages familiales dédiées. Partagez des photos, des histoires et bien plus encore avec vos proches.</p>
+                <h3 class="text-center text-primary" data-lang="family-title">Pages familiales pour conserver vos souvenirs</h3>
+                <p class="text-center text-muted" data-lang="family-description">Conservez vos souvenirs précieux avec des pages familiales dédiées. Partagez des photos, des histoires et bien plus encore avec vos proches.</p>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="portfolio-item">
@@ -246,107 +338,107 @@
                                 <div class="portfolio-image">
                                     <img src="img/familyBlog.png" class="img-fluid rounded" alt="Family Page 1">
                                     <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Page familiale</h5>
-                                        <p>Un site personnalisé pour conserver les souvenirs familiaux en ligne et les presenter aux autres !.</p>
+                                        <h5 class="mt-2" data-lang="family-item-1-title">Page familiale</h5>
+                                        <p data-lang="family-item-1-description">Un site personnalisé pour conserver les souvenirs familiaux en ligne et les présenter aux autres !</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <!-- Add more projects for family pages as needed -->
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
         <section id="faq" class="content-section" style="display: none;" data-aos="fade-up">
-            <h2>Foire Aux Questions (FAQ)</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
-                            Quels types de sites web proposez-vous ?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Nous proposons une large gamme de sites web : des boutiques en ligne pour les entreprises, des portfolios professionnels pour les individus, ainsi que des pages familiales pour préserver vos souvenirs.
-                        </div>
+    <div class="container">
+        <h2 class="faq-title text-center" data-lang="faq-title">Foire Aux Questions (FAQ)</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne" data-lang="faq-question-1">
+                        Quels types de sites web proposez-vous ?
+                    </button>
+                </h2>
+                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-lang="faq-answer-1">
+                        Nous proposons une large gamme de sites web : des boutiques en ligne pour les entreprises, des portfolios professionnels pour les individus, ainsi que des pages familiales pour préserver vos souvenirs.
                     </div>
                 </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
-                            Est-ce que je possède le site une fois acheté ?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Oui, une fois acheté, le site vous appartient à vie. Vous recevrez également le site avec l'extension de votre choix (.com, .fr, .net, etc.).
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
-                            Puis-je demander des modifications après la livraison du site ?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Absolument ! Nous sommes à votre écoute pour toute modification ou ajustement dont vous avez besoin après la livraison de votre site.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
-                            Combien de temps faut-il pour créer un site web ?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Le délai de création dépend de la complexité du projet, mais en général, nous livrons les sites entre 2 à 6 semaines après la validation de la maquette.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
-                            Quels sont vos tarifs ?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Nos tarifs varient en fonction des besoins spécifiques du projet. Contactez-nous pour un devis personnalisé en fonction de vos exigences.
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more FAQ items as needed -->
             </div>
-        </section>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo" data-lang="faq-question-2">
+                        Est-ce que je possède le site une fois acheté ?
+                    </button>
+                </h2>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-lang="faq-answer-2">
+                        Oui, une fois acheté, le site vous appartient à vie. Vous recevrez également le site avec l'extension de votre choix (.com, .fr, .net, etc.).
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree" data-lang="faq-question-3">
+                        Puis-je demander des modifications après la livraison du site ?
+                    </button>
+                </h2>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-lang="faq-answer-3">
+                        Absolument ! Nous sommes à votre écoute pour toute modification ou ajustement dont vous avez besoin après la livraison de votre site.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour" data-lang="faq-question-4">
+                        Combien de temps faut-il pour créer un site web ?
+                    </button>
+                </h2>
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-lang="faq-answer-4">
+                        Le délai de création dépend de la complexité du projet, mais en général, nous livrons les sites entre 2 à 6 semaines après la validation de la maquette.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive" data-lang="faq-question-5">
+                        Quels sont vos tarifs ?
+                    </button>
+                </h2>
+                <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-lang="faq-answer-5">
+                        Nos tarifs varient en fonction des besoins spécifiques du projet. Contactez-nous pour un devis personnalisé en fonction de vos exigences.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-         <!-- Contact Section -->
-         <section id="contact" class="content-section" style="display: none;" data-aos="fade-up">
-            <h2>Contactez-nous</h2>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section" style="display: none;" data-aos="fade-up">
+            <h2 data-lang="contact-title">Contactez-nous</h2>
             <div class="row">
                 <div class="col-md-7">
                     <div class="map-responsive">
-                        <iframe src="https://maps.google.com/maps?q=Paris&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0;" allowfullscreen></iframe>
+                        <iframe src="https://maps.google.com/maps?q=Dortmund&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0;" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-md-5">
                     <form action="https://formsubmit.co/yvandzefak1@gmail.com" method="POST">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nom</label>
+                            <label for="name" class="form-label" data-lang="contact-name">Nom</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Votre Nom" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
+                            <label for="email" class="form-label" data-lang="contact-email">Email</label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="Votre Email" required>
                         </div>
                         <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
+                            <label for="message" class="form-label" data-lang="contact-message">Message</label>
                             <textarea class="form-control" id="message" name="message" rows="4" placeholder="Votre Message" required></textarea>
                         </div>
                         <!-- Protection contre les spams (honeypot) -->
@@ -355,11 +447,11 @@
                         <input type="hidden" name="_next" value="https://web-snape.vercel.app/">
                         <!-- Adresse email destinataire -->
                         <input type="hidden" name="_email" value="yvandzefak1@gmail.com">
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                        <button type="submit" class="btn btn-primary" data-lang="contact-submit">Envoyer</button>
                     </form>
                     <div class="mt-4">
                         <a href="https://wa.me/+491736786111?text=Bonjour, je suis intéressé par vos services WebSnape." target="_blank" class="btn btn-success">
-                            <i class="fab fa-whatsapp"></i> Contacter via WhatsApp
+                            <i class="fab fa-whatsapp"></i> <span data-lang="contact-whatsapp">Contacter via WhatsApp</span>
                         </a>
                     </div>
                 </div>
@@ -369,30 +461,13 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center p-4 mt-5">
-        <p>&copy; 2024 WebSnape by Yvan. Tous droits réservés.</p>
-        <p>Conçu par <a href="https://github.com/yvan-dz" target="_blank">Yvan Dzefak</a></p>
+        <p>&copy; 2024 WebSnape by Yvan. <span data-lang="footer-rights">Tous droits réservés.</span></p>
+        <p><span data-lang="footer-created">Conçu par</span> <a href="https://github.com/yvan-dz" target="_blank">Yvan Dzefak</a></p>
     </footer>
 
     <!-- Bootstrap JS, AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-
-            const selectedSection = document.getElementById(sectionId);
-            selectedSection.style.display = 'block';
-        }
-
-        // Show home section by default
-        window.onload = function() {
-            showSection('home');
-        }
-    </script>
+   <script src="script.js"></script>
 </body>
 </html>

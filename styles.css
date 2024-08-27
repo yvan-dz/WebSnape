@@ -187,6 +187,191 @@ p {
     color: #0062E6;
 }
 
+/* Enhanced Why Us Section */
+#why-us {
+    background-color: #f7f9fc;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.why-us-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.why-us-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.why-us-item .icon {
+    font-size: 2rem;
+    color: #007BFF;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-lang-btn {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-lang-btn:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.dropdown-menu a.dropdown-item {
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* FAQ Section */
+#faq .faq-title {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+#faq .accordion {
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#faq .accordion-item {
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+#faq .accordion-button {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #2c3e50;
+    border: none;
+    padding: 15px;
+}
+
+#faq .accordion-button:not(.collapsed) {
+    color: #007bff;
+    background-color: #e9ecef;
+}
+
+#faq .accordion-button:focus {
+    box-shadow: none;
+}
+
+#faq .accordion-body {
+    background-color: #ffffff;
+    color: #34495e;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+#faq .accordion-header {
+    margin-bottom: 0;
+}
+
+#faq .accordion-header button {
+    transition: background-color 0.3s ease;
+}
+
+#faq .accordion-header button:hover {
+    background-color: #e9ecef;
+}
+
+/* Expertise and Advanced Features Sections */
+.expertise-section, .advanced-features-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-section:hover, .advanced-features-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+    font-weight: 700;
+    color: #007BFF;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 70px;
+    height: 4px;
+    background: #6610f2;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 50px;
+}
+
+.section-description {
+    font-size: 1.3rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.advanced-features-section .section-description::before {
+    content: '“';
+    top: -20px;
+    left: -20px;
+}
+
+.advanced-features-section .section-description::after {
+    content: '”';
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-description {
+        font-size: 1.1rem;
+    }
+}
+
+
+
 /* Portfolio Section */
 .portfolio-category h3 {
     font-size: 2rem;
