@@ -21,10 +21,12 @@ function showSection(sectionId) {
 
 
 
-// Show home section by default
+// Show home section by default and set default language to English
 window.onload = function() {
     showSection('home');
+    changeLanguage('en'); // Set English as the default language
 }
+
 
 // Fonction pour changer la langue uniquement pour les sections Accueil et Why Us
 function changeLanguageForHomeAndWhyUs(lang) {
