@@ -1,583 +1,1019 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE HTML>
+<html lang="en-US">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSnape by Yvan - Votre Partenaire Web</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>WebSnape - Acceuil</title>
+	<meta name="description" content="">
+	<!-- ici tu mettras la description de ta page pour aider le SEO c'est le texte qu'on voit generalement en dessous des liens sur google et meme quand on partage les liens -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="mot cle 1, mot cle 2, etc...">
+	<!-- ici tu mettra les mots clé séparés d'une virgule chacun-->
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png">
+	<!-- bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+	<!-- carousel CSS -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+	<!-- animate CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+	<!-- animated-text CSS -->
+	<link rel="stylesheet" href="assets/css/animated-text.css" type="text/css" media="all">
+	<!-- font-awesome CSS -->
+	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+	<!-- theme-default CSS -->
+	<link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+	<!-- meanmenu CSS -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+	<!-- transitions CSS -->
+	<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+	<!-- venobox CSS -->
+	<link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+	<!-- bootstrap icons -->
+	<link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all">
+	<!-- Main Style CSS -->
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+	<!-- responsive CSS -->
+	<link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+	<!-- Coustom Animation CSS -->
+	<link rel="stylesheet" href="assets/css/coustom-animation.css" type="text/css" media="all">
+	<!-- modernizr js -->
+	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#" data-lang="nav-brand">WebSnape by Yvan</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#" onclick="showSection('home')" data-lang="nav-home">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="showSection('services')" data-lang="nav-services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="showSection('portfolio')" data-lang="nav-portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="showSection('faq')" data-lang="nav-faq">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="showSection('contact')" data-lang="nav-contact">Contact</a>
-                </li>
-            </ul>
-           <!-- Language Selector -->
-<div class="dropdown ms-3">
-    <button class="btn btn-secondary dropdown-toggle custom-lang-btn" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-        <i class="fas fa-globe"></i> Language
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-        <li><a class="dropdown-item" href="#" onclick="changeLanguage('fr')">🇫🇷 Français </a></li>
-        <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇬🇧 English</a></li>
-        <li><a class="dropdown-item" href="#" onclick="changeLanguage('de')">🇩🇪 Deutsch</a></li>
-    </ul>
-</div>
-            
-        </div>
-        </div>
-    </div>
-</nav>
+
+	<!-- loder -->
+	<div class="loader-wrapper">
+		<span class="loader"></span>
+		<div class="loder-section left-section"></div>
+		<div class="loder-section right-section"></div>
+	</div>
+
+	<!--==================================================-->
+	<!-- debut menu haut -->
+	<!--==================================================-->
+	<div class="header-area" id="sticky-header">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-3">
+					<div class="header-logo">
+						<a href="index.html" style="color: aliceblue;"><img src="assets/images/websnape.png"
+								style="width: 150px;" alt="logo"></a>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="header-menu">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="service.html">Services</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="faqs.html">Faqs</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+						<div class="header-search-icon search-box-outer">
+							<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+						</div>
+						<div class="header-button">
+							<a href="contact.html">Get A Quote</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- Fin du menu haut -->
+	<!--==================================================-->
 
 
-    <!-- Sections -->
-    <main class="container mt-5">
-      <!-- Hero Section (Home) -->
-<section id="home" class="content-section hero-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right">
-                <h1 class="display-4" style="font-weight: bold; color: #ffffff;" data-translate="home-title">Transformez vos idées en sites web captivants</h1>
-                <p class="lead" style="font-size: 1.2rem; color: #f8f9fa;" data-translate="home-description">WebSnape by Yvan crée des sites web sur mesure pour entreprises, portfolios et plus encore.</p>
-                <a href="#services" class="btn btn-primary btn-lg mt-3" onclick="showSection('services')" style="border-radius: 25px; padding: 10px 30px;margin-bottom: 6%;" data-translate="home-button">Découvrez nos services</a>
-            </div>
-            <div class="col-lg-5" data-aos="fade-left">
-                <img src="https://www.spreadsheetweb.com/wp-content/uploads/2018/08/Utilizing-Web-Services-in-Excel-using-Formulas-1080x675.jpg" class="img-fluid rounded" alt="Innovation Image">
-            </div>
-        </div>
-    </div>
-    <div class="hero-overlay"></div>
-</section>
-
-<!-- New Presentation Section -->
-<section id="why-us" class="bg-light py-5" style="display: none;">
-    <div class="container">
-        <h2 class="text-center text-primary" style="font-weight: bold;" data-translate="why-title" data-aos="fade-right">Pourquoi choisir WebSnape ?</h2>
-        <p class="text-center text-muted mb-5" style="font-size: 1.2rem;" data-translate="why-description" data-aos="fade-right" data-aos-delay="100">Découvrez ce qui fait de WebSnape by Yvan votre meilleur partenaire pour tous vos besoins en création de sites web.</p>
-        
-        <div class="row">
-            <div class="col-md-6" data-aos="fade-up">
-                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-handshake icon"></i>
-                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-client">Proximité avec le client et communication</h3>
-                    <p style="font-size: 1.1rem;" data-translate="why-client-description">Chez WebSnape, nous croyons en une communication amicale et respectueuse. Nous sommes à vos côtés à chaque étape pour vous offrir un service personnalisé.</p>
-                </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-cogs icon"></i>
-                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-flexibility">Flexibilité des fonctionnalités</h3>
-                    <p style="font-size: 1.1rem;" data-translate="why-flexibility-description">Vous avez le contrôle total sur les fonctionnalités de votre site. Ajoutez ou retirez des options selon vos besoins. Le client est roi chez WebSnape.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-paint-brush icon"></i>
-                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-design">Personnalisation et design unique</h3>
-                    <p style="font-size: 1.1rem;" data-translate="why-design-description">Imaginez votre propre design ou décrivez-le-nous, et nous vous livrerons une page web parfaitement adaptée à vos attentes, avec un délai de traitement rapide.</p>
-                </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-expand-arrows-alt icon"></i>
-                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-scalability">Évolutivité de votre site</h3>
-                    <p style="font-size: 1.1rem;" data-translate="why-scalability-description">Si votre entreprise se développe, nous pouvons intégrer des fonctionnalités plus poussées pour répondre à vos nouveaux besoins.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="500">
-                    <i class="fas fa-key icon"></i>
-                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-ownership">Propriété totale du code</h3>
-                    <p style="font-size: 1.1rem;" data-translate="why-ownership-description">Vous êtes le propriétaire de votre site, sans aucune location. WebSnape gère l'hébergement, la sécurité, et reste disponible pour toute amélioration.</p>
-                </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="why-us-item" data-aos="zoom-in" data-aos-delay="600">
-                    <i class="fas fa-heart icon"></i>
-                    <h3 class="text-primary" style="font-weight: bold;" data-translate="why-partner">Votre partenaire idéal</h3>
-                    <p style="font-size: 1.1rem;" data-translate="why-partner-description">WebSnape est le partenaire idéal pour vous accompagner dans votre aventure numérique, en vous offrant un service sur mesure et un support continu.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="600">
-            <a href="#" onclick="showSection('contact')"  class="btn btn-primary btn-lg" data-translate="why-contact-button">Contactez-nous dès aujourd'hui</a>
-        </div>
-        
-    </div>
-</section>
 
 
-        
-        
-
-       <!-- Services Section -->
-<section id="services" class="content-section" style="display: none;" data-aos="fade-up">
-    <h2 data-lang="services-title">Nos Services</h2>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="service-box" data-aos="flip-left">
-                <div class="icon-box">
-                    <i class="fas fa-laptop-code icon"></i>
-                </div>
-                <h3 data-lang="services-title-1">Sites Web Professionnels</h3>
-                <p data-lang="services-description-1">Nous concevons des sites pour les entreprises de toutes tailles, avec une attention particulière aux détails et à l'expérience utilisateur.</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="service-box" data-aos="flip-left" data-aos-delay="100">
-                <div class="icon-box">
-                    <i class="fas fa-user-tie icon"></i>
-                </div>
-                <h3 data-lang="services-title-2">Portfolios Personnels</h3>
-                <p data-lang="services-description-2">Présentez vos talents avec un portfolio en ligne élégant et personnalisé.</p>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="service-box" data-aos="flip-left" data-aos-delay="200">
-                <div class="icon-box">
-                    <i class="fas fa-camera-retro icon"></i>
-                </div>
-                <h3 data-lang="services-title-3">Sites Familiaux</h3>
-                <p data-lang="services-description-3">Créez une galerie numérique de souvenirs pour les générations à venir.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-5 expertise-section">
-        <div class="col-md-12 text-center">
-            <h3 data-lang="expertise-title" class="section-title">Votre design, notre expertise</h3>
-            <p data-lang="expertise-description" class="section-description">
-                Envoyez-nous votre esquisse sur papier, nous nous occupons du reste. Avec WebSnape by Yvan, votre site est façonné selon vos désirs.
-            </p>
-        </div>
-    </div>
-    <div class="row mt-5 advanced-features-section">
-        <div class="col-md-12 text-center">
-            <h3 data-lang="additional-features-title" class="section-title">Fonctionnalités Avancées</h3>
-            <p data-lang="additional-features-description" class="section-description">
-                Enrichissez votre site avec des fonctionnalités telles que l'intégration d'un calendrier en ligne pour gérer les réservations, la mise en place de systèmes de réservation en ligne, la création de formulaires de contact personnalisés, le paiement en ligne via PayPal, la configuration d'options de création de compte, et bien d'autres encore. Explorez ce qui est possible pour répondre aux besoins spécifiques de votre entreprise.
-            </p>
-        </div>
-    </div>
-    
-</section>
+	<!--==================================================-->
+	<!-- Menu principal-->
+	<!--==================================================-->
+	<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+		<div class="mobile-menu">
+				<!-- <a href="index.html"><img src="assets/images/websnape.png" style="width: 150px;"
+							alt="logo websnape"></a>	 -->
+				
+			<nav class="header-menu">
+			
+				<ul class="nav_scroll">
+				
+					<li><a href="#">home</a></li>
+					<li><a href="service.html">Services</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="faqs.html">Faqs</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- Fin menu principal -->
+	<!--==================================================-->
 
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="content-section" data-aos="fade-up">
-            <h2 data-lang="portfolio-title">Notre Portfolio</h2>
-            
-            <div class="alert alert-info text-center" style="font-size: 1.1rem; font-weight: bold;" data-lang="demo-alert">
-                Ces sites sont des maquettes démonstratives. Les fonctionnalités seront ajoutées en fonction des besoins de chaque client. N'hésitez pas à y jeter un œil pour voir ce qui est possible !
-            </div>
-            
-            
-            
+	<!--==================================================-->
+	<!-- Debut page principale-->
+	<!--==================================================-->
+	<div class="hero-area style-one d-flex align-items-center">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<div class="hero-content">
+						<h4>Welcome to Websnape </h4>
+						<h1>Transform your ideas into </h1>
+						<h1>captivating websites</h1>
+						<p>WebSnape specializes in creating custom websites tailored to businesses and portfolios. We understand that effective brand advertising and marketing are essential for business success, and we’re here to bring your vision to life online.
 
-            <!-- Online Shops Section -->
-            <div class="portfolio-category mt-5 p-4 rounded bg-light">
-                <h3 class="text-center text-primary" data-lang="portfolio-shop-title">Boutiques en ligne pour vos entreprises</h3>
-                <p class="text-center text-muted" data-lang="portfolio-shop-description">Nous créons des boutiques en ligne modernes et fonctionnelles, adaptées à toutes les tailles d'entreprise. Que vous soyez une petite startup ou une grande entreprise, nous avons la solution pour vous.</p>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://delicious-dine-six.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/deliciousDine.png" class="img-fluid rounded" alt="Online Shop 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="shop-item-1-title">Page en ligne d'un restaurant</h5>
-                                        <p data-lang="shop-item-1-description">Un site en ligne permettant aux petites entreprises de présenter leurs services.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://sweet-treats.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/sweet_treats.png" class="img-fluid rounded" alt="Online Shop 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="shop-item-2-title">Page en ligne d'un commerce de pâtisserie</h5>
-                                        <p data-lang="shop-item-2-description">Un site en ligne permettant aux petites entreprises de présenter leurs produits.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                   
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://luxe-salon.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/luxeSalon.png" class="img-fluid rounded" alt="Online Shop 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="shop-item-3-title">Page en ligne d'un Salon de coiffure</h5>
-                                        <p data-lang="shop-item-3-description">Un site en ligne présentant un salon et les différents modèles disponibles</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://premium-phone.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/premiumPhone.png" class="img-fluid rounded" alt="Online Shop 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="shop-item-4-title">Page en ligne d'une boutique de téléphones</h5>
-                                        <p data-lang="shop-item-4-description">Un site en ligne parfait pour du E-Commerce de téléphone. </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://fashion-hub-omega.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/fashionhub.png" class="img-fluid rounded" alt="Online Shop 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="shop-item-5-title">Exemple d'une page en ligne plus avancée</h5>
-                                        <p data-lang="shop-item-5-description">Un site en ligne réservé aux business plus grands et demandant plus de fonctionnalités.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    
-            <div class="col-md-4">
-                <div class="portfolio-item">
-                    <a href="https://luxe-wigs.vercel.app/" target="_blank">
-                        <div class="portfolio-image">
-                            <img src="img/luxwigs.png" class="img-fluid rounded" alt="Online Shop 1">
-                            <div class="portfolio-overlay">
-                                <h5 class="mt-2" data-lang="shop-item-6-title">Page en ligne d'un commerce de perruques</h5>
-                                <p data-lang="shop-item-6-description">Un site en ligne présentant un commerce de meches et peruques</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-                </div>
-            </div>
+						</p>
+					</div>
+					<div class="hero-button style-one">
+						<a href="about.html">About Us</a>
+						<a class="button-two" href="service.html">Our services <i
+								class="flaticon flaticon-computer"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- fin du main menu-->
+	<!--==================================================-->
 
 
-            <div class="col-md-4">
-                <div class="portfolio-item">
-                    <a href="https://foot-maillots.vercel.app/" target="_blank">
-                        <div class="portfolio-image">
-                            <img src="img/footmaillot.png" class="img-fluid rounded" alt="Online Shop 1">
-                            <div class="portfolio-overlay">
-                                <h5 class="mt-2" >Page en ligne d'un commerce de maillots</h5>
-                                <p >supporte ton equipe favorite</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-                </div>
-            </div>
 
-            <!-- Portfolios Section -->
-            <div class="portfolio-category mt-5 p-4 rounded bg-light">
-                <h3 class="text-center text-primary" data-lang="portfolio-title-2">Portfolios pour vos demandes d'emploi</h3>
-                <p class="text-center text-muted" data-lang="portfolio-description-2">Impressionnez vos employeurs potentiels avec un portfolio en ligne élégant et personnalisé. Nous créons des plateformes qui mettent en valeur vos compétences et expériences.</p>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://portfolio1-swart-three.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/portfolio1.png" class="img-fluid rounded" alt="Portfolio 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="portfolio-item-1-title">Portfolio pour un étudiant en informatique</h5>
-                                        <p data-lang="portfolio-item-1-description">Un site web osé et futuriste.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://portfolio2-one-green.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/portfolio2.png" class="img-fluid rounded" alt="Portfolio 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="portfolio-item-2-title">Portfolio pour un étudiant en électrotechnique</h5>
-                                        <p data-lang="portfolio-item-2-description">Un site web professionnel et sobre.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://portfolio3-three-vert.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/portfolio3.png" class="img-fluid rounded" alt="Portfolio 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" ">Portfolio pour un étudiant en economie</h5>
-                                        <p >Un site web authentique et creatif.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                   
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://portfolio4-wine.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/portfolio4.png" class="img-fluid rounded" alt="Portfolio 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="portfolio-item-1-title">Portfolio pour un étudiant en Medecine</h5>
-                                        <p data-lang="portfolio-item-1-description">Un site web authentique et creatif.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://portfolio5-ebon.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/portfolio5.png" class="img-fluid rounded" alt="Portfolio 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="portfolio-item-1-title">Portfolio pour un étudiant en Architecture </h5>
-                                        <p data-lang="portfolio-item-1-description">Un site web sobre et sérieux.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://portfolio6-beta.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/portfolio6.png" class="img-fluid rounded" alt="Portfolio 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Portfolio pour un étudiant en Architecture </h5>
-                                        <p >Un site web sobre et sérieux.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://portfolio8-rho.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/portfolio8.png" class="img-fluid rounded" alt="Portfolio 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Portfolio pour un étudiant en chimie </h5>
-                                        <p >Glacial et frais.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://portfolio9-phi.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/portfolio9.png" class="img-fluid rounded" alt="Portfolio 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2">Portfolio pour un étudiant en chimie des materiaux </h5>
-                                        <p >brulant et chaud,.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-        
-
-                </div>
-            </div>
-
-            
-        </div>
-    </div>
-
-            <!-- Family Pages Section -->
-            <div class="portfolio-category mt-5 p-4 rounded bg-light">
-                <h3 class="text-center text-primary" data-lang="family-title">Pages familiales pour conserver vos souvenirs</h3>
-                <p class="text-center text-muted" data-lang="family-description">Conservez vos souvenirs précieux avec des pages familiales dédiées. Partagez des photos, des histoires et bien plus encore avec vos proches.</p>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="portfolio-item">
-                            <a href="https://family-web-virid.vercel.app/" target="_blank">
-                                <div class="portfolio-image">
-                                    <img src="img/familyBlog.png" class="img-fluid rounded" alt="Family Page 1">
-                                    <div class="portfolio-overlay">
-                                        <h5 class="mt-2" data-lang="family-item-1-title">Page familiale</h5>
-                                        <p data-lang="family-item-1-description">Un site personnalisé pour conserver les souvenirs familiaux en ligne et les présenter aux autres !</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="content-section" style="display: none;" data-aos="fade-up">
-    <div class="container">
-        <h2 class="faq-title text-center" data-lang="faq-title">Foire Aux Questions (FAQ)</h2>
-        <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqHeadingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne" data-lang="faq-question-1">
-                        Quels types de sites web proposez-vous ?
-                    </button>
-                </h2>
-                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" data-lang="faq-answer-1">
-                        Nous proposons une large gamme de sites web : des boutiques en ligne pour les entreprises, des portfolios professionnels pour les individus, ainsi que des pages familiales pour préserver vos souvenirs.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqHeadingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo" data-lang="faq-question-2">
-                        Est-ce que je possède le site une fois acheté ?
-                    </button>
-                </h2>
-                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" data-lang="faq-answer-2">
-                        Oui, une fois acheté, le site vous appartient à vie. Vous recevrez également le site avec l'extension de votre choix (.com, .fr, .net, etc.).
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqHeadingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree" data-lang="faq-question-3">
-                        Puis-je demander des modifications après la livraison du site ?
-                    </button>
-                </h2>
-                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" data-lang="faq-answer-3">
-                        Absolument ! Nous sommes à votre écoute pour toute modification ou ajustement dont vous avez besoin après la livraison de votre site.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqHeadingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour" data-lang="faq-question-4">
-                        Combien de temps faut-il pour créer un site web ?
-                    </button>
-                </h2>
-                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" data-lang="faq-answer-4">
-                        Le délai de création dépend de la complexité du projet, mais en général, nous livrons les sites entre 2 à 6 semaines après la validation de la maquette.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="faqHeadingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive" data-lang="faq-question-5">
-                        Quels sont vos tarifs ?
-                    </button>
-                </h2>
-                <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" data-lang="faq-answer-5">
-                        Nos tarifs varient en fonction des besoins spécifiques du projet. Contactez-nous pour un devis personnalisé en fonction de vos exigences.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+	<!--==================================================-->
+	<!-- Start WebSnape Feature Area Style One-->
+	<!--==================================================-->
+	<div class="feature-area style-one">
+		<div class="container">
+			<div class="row margin-top">
+				<div class="col-lg-4 col-md-6 col-xl-3">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/feature-icon.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Website conception</h4>
+									<p>We bring your ideas to life with tailored website design and development, ensuring a unique, engaging experience for your audience.</p>
+								</div>
+								<div class="flip-box-button">
+									<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/feature-icon.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Website conception</h4>
+									<p>We bring your ideas to life with tailored website design and development, ensuring a unique, engaging experience for your audience.</p>
+								</div>
+								<div class="flip-box-button">
+									<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xl-3">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/feature-icon-2.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>API's Integration</h4>
+									<p>Seamlessly connect and enhance your systems with custom API integrations, enabling efficient data flow and functionality across your platforms.</p>
+								</div>
+								<div class="flip-box-button">
+									<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/feature-icon-2.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>API's Integration</h4>
+									<p>Seamlessly connect and enhance your systems with custom API integrations, enabling efficient data flow and functionality across your platforms.</p>
+								</div>
+								<div class="flip-box-button">
+									<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xl-3">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/feature-icon-3.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Refont & Optimisation</h4>
+									<p>Elevate your site’s performance and aesthetics with our expert redesign and optimization services, creating a modern, user-friendly experience.</p>
+								</div>
+								<div class="flip-box-button">
+									<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/feature-icon-3.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Refont & Optimisation</h4>
+									<p>Elevate your site’s performance and aesthetics with our expert redesign and optimization services, creating a modern, user-friendly experience.</p>
+								</div>
+								<div class="flip-box-button">
+									<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-xl-3">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/feature-icon-4.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Data Security</h4>
+									<p>Protect your business and customer data with robust security solutions that safeguard against threats, ensuring peace of mind and compliance.</p>
+								</div>
+								<div class="flip-box-button">
+									<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/feature-icon-4.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Data Security</h4>
+									<p>Protect your business and customer data with robust security solutions that safeguard against threats, ensuring peace of mind and compliance.</p>
+								</div>
+								<div class="flip-box-button">
+									<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End WebSnape Feature Area Style One-->
+	<!--==================================================-->
 
 
-        <!-- Contact Section -->
-        <section id="contact" class="content-section" style="display: none;" data-aos="fade-up">
-            <h2 data-lang="contact-title">Contactez-nous</h2>
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="map-responsive">
-                        <iframe src="https://maps.google.com/maps?q=Dortmund&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0;" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <form action="https://formsubmit.co/yvandzefak1@gmail.com" method="POST">
-                        <div class="mb-3">
-                            <label for="name" class="form-label" data-lang="contact-name">Nom</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Votre Nom" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label" data-lang="contact-email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Votre Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label" data-lang="contact-message">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Votre Message" required></textarea>
-                        </div>
-                        <!-- Protection contre les spams (honeypot) -->
-                        <input type="hidden" name="_honey" style="display:none">
-                        <!-- Rediriger après l'envoi -->
-                        <input type="hidden" name="_next" value="https://websnape.de/">
-                        <!-- Adresse email destinataire -->
-                        <input type="hidden" name="_email" value="yvandzefak1@gmail.com">
-                        <button type="submit" class="btn btn-primary" data-lang="contact-submit">Envoyer</button>
-                    </form>
-                    <div class="mt-4">
-                        <a href="https://wa.me/+491736786111?text=Bonjour, je suis intéressé par vos services WebSnape." target="_blank" class="btn btn-success">
-                            <i class="fab fa-whatsapp"></i> <span data-lang="contact-whatsapp">Contacter via WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+	<!--==================================================-->
+	<!-- Start WebSnape About Area Style One-->
+	<!--==================================================-->
+	<div class="about-area style-one">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="about-thumb">
+						<img src="assets/images/home-3/about.jpg" style="width: 600px;" alt="">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="about-right">
+						<div class="section-title left style-one">
+							<h4>Who We Are</h4>
+							<h1>Get Exclusive It Solutions &</h1>
+							<h1>Services With <span>WebSnape</span></h1>
+							<p>As your business evolves, we seamlessly integrate advanced features to align with your growing needs.
+							</p>
+						</div>
+						<div class="about-icon-box">
+							<div class="about-icon-thumb">
+								<img src="assets/images/home-1/about-icon1.png" alt="">
+							</div>
+							<div class="about-icon-box-content">
+								<h4>Personalization & Unique Design</h4>
+								<p>Envision your ideal design or share your vision with us, 
+									and we'll create a perfectly tailored webpage that meets your expectations with swift delivery.</p>
+							</div>
+						</div>
+						<div class="about-icon-box">
+							<div class="about-icon-thumb">
+								<img src="assets/images/home-1/about-icon2.png" alt="">
+							</div>
+							<div class="about-icon-box-content">
+								<h4>Client Proximity & Communication</h4>
+								<p>At WebSnape, we value friendly and respectful communication. We're with you every step of the way, 
+									delivering personalized service to bring your vision to life.</p>
+							</div>
+						</div>
+						<div class="about-flex-box">
+							<div class="WebSnape-button style-one">
+								<a href="about.html">About More<i class="bi bi-arrow-right-circle-fill"></i></a>
+							</div>
+							<div class="about-author">
+								<div class="about-author-thumb">
+									<img src="assets/images/home-3/yvan.jpg" style="width: 60px;" alt="">
+								</div>
+								<div class="about-author-content">
+									<h4>Yvan Dzefack</h4>
+									<p>CEO & Founder</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about-shape">
+				<img src="assets/images/home-1/about-shape.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- End WebSnape About Area Style One-->
+	<!--==================================================-->
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center p-4 mt-5">
-        <p>&copy; 2024 WebSnape by Yvan. <span data-lang="footer-rights">Tous droits réservés.</span></p>
-        <p><span data-lang="footer-created">Conçu par</span> <a href="https://github.com/yvan-dz" target="_blank">Yvan Dzefak</a></p>
-    </footer>
 
-    <!-- Bootstrap JS, AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <script src="script.js"></script>
+
+	<!--==================================================-->
+	<!-- Start WebSnape Service Area Style One-->
+	<!--==================================================-->
+	<div class="service-area style-one">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="section-title center style-one">
+						<h4>Service We Provide </h4>
+						<h1> We provide a comprehensive tailored suite of</h1>
+						<h1>IT Solutions & <span>Services</span></h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-xl-4">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon1.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Web Design</h4>
+									<p>Our web design services focus on creating visually appealing, user-centered designs that enhance engagement and reflect your brand’s identity.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon1.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Web Design</h4>
+									<p>Our web design services focus on creating visually appealing, user-centered designs that enhance engagement and reflect your brand’s identity.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-xl-4">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon2.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Motion Design</h4>
+									<p>Bring your ideas to life with dynamic motion design, adding engaging animations and visual effects to captivate your audience.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon2.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Motion Design</h4>
+									<p>Bring your ideas to life with dynamic motion design, adding engaging animations and visual effects to captivate your audience.
+									</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-xl-4">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon3.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Digital Marketing</h4>
+									<p>Boost your online presence with tailored digital marketing strategies, helping you reach and engage your target audience effectively.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon3.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Digital Marketing</h4>
+									<p>Boost your online presence with tailored digital marketing strategies, helping you reach and engage your target audience effectively.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-xl-4">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon4.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Web Development</h4>
+									<p>Our web development team builds robust, scalable websites with cutting-edge technology to ensure a seamless user experience.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon4.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Web Development</h4>
+									<p>Our web development team builds robust, scalable websites with cutting-edge technology to ensure a seamless user experience.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-xl-4">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon5.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>App Development</h4>
+									<p>We develop custom mobile and web applications that align with your business goals, offering intuitive functionality and superior performance.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon5.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>App Development</h4>
+									<p>We develop custom mobile and web applications that align with your business goals, offering intuitive functionality and superior performance.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-xl-4">
+					<div class="flip-box">
+						<div class="flip-box-inner">
+							<div class="flip-box-front">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon6.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Creative Solution</h4>
+									<p>Innovative and tailored creative solutions designed to meet your unique business needs, helping you stand out in a competitive market.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="flip-box-back">
+								<div class="flip-box-thumb">
+									<img src="assets/images/home-1/service-icon6.png" alt="">
+								</div>
+								<div class="flip-box-content">
+									<h4>Creative Solution</h4>
+									<p>Innovative and tailored creative solutions designed to meet your unique business needs, helping you stand out in a competitive market.</p>
+									<div class="flip-box-button">
+										<a href="service.html">Read More<i class="fa-solid fa-angles-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- Fin des services-->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- Workprocess-->
+	<!--==================================================-->
+	<div class="work-process-area style-one">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="section-title center style-one">
+						<h4>Work Process</h4>
+						<h1>Working Process For <span>Technology</span></h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="single-process-box before-transprant after-transprant">
+						<div class="process-box-thumb">
+							<img src="assets/images/home-1/process-icon-1.png" alt="">
+							<div class="process-number">
+								<span>1</span>
+							</div>
+						</div>
+						<div class="process-content">
+							<h4>Select A Project</h4>
+							<p>Choose the project that aligns with your goals, and let us know your vision and requirements.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-process-box before-transprant">
+						<div class="process-box-thumb">
+							<img src="assets/images/home-1/process-icon-2.png" alt="">
+							<div class="process-number">
+								<span>2</span>
+							</div>
+						</div>
+						<div class="process-content">
+							<h4>Project Analysis</h4>
+							<p>We evaluate the feasibility and scope of your project to ensure it aligns with your objectives and expectations.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-process-box after-transprant">
+						<div class="process-box-thumb">
+							<img src="assets/images/home-1/process-icon-3.png" alt="">
+							<div class="process-number">
+								<span>3</span>
+							</div>
+						</div>
+						<div class="process-content">
+							<h4>Start Process</h4>
+							<p>Our team initiates the development process, keeping you informed at every stage to guarantee satisfaction.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-process-box before-transprant">
+						<div class="process-box-thumb">
+							<img src="assets/images/home-1/process-icon-4.png" alt="">
+							<div class="process-number">
+								<span>4</span>
+							</div>
+						</div>
+						<div class="process-content">
+							<h4>Deliver Result</h4>
+							<p>We deliver a high-quality final product that meets your specifications, ready to elevate your business or brand.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- workprocess fin -->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- debut FaQs -->
+	<!--==================================================-->
+	<div class="faqs-area style-one">
+		<div class="container">
+			<div class="row add-faqs-bg align-items-center">
+				<div class="col-lg-6">
+					<div class="single-contact-box">
+						<div class="contact-content">
+							<h4>Get Free Estimate</h4>
+						</div>
+						<form action="#">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="single-input-box">
+										<input type="text" name="name" placeholder="Name" required>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="single-input-box">
+										<input type="text" name="phone" placeholder="Phone" required>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="single-input-box">
+										<input type="text" name="Email" placeholder="Email" required>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="single-input-box">
+										<textarea name="message" placeholder="Write Message" required></textarea>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="single-input-box">
+										<button type="submit">Free Consultancy</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-lg-6 faqs-right">
+					<div class="section-title left style-one">
+						<h4>FaQs</h4>
+						<h1>Frequently Asked </h1>
+						<h1> Questions </h1>
+					</div>
+					<div class="faqs-container">
+						<div class="faq-singular">
+							<h2 class="faq-question"><img src="assets/images/home-1/question.png" alt="">#1 How long does it take to complete a project?
+							</h2>
+							<div class="faq-answer">
+								<div class="desc">
+									The timeline depends on the scope and complexity of the project.
+									 Simple websites may take a few weeks, while more complex applications and integrations could take longer.
+									  We’ll provide an estimated timeline after discussing your project in detail.
+								</div>
+							</div>
+						</div>
+						<div class="faq-singular">
+							<h2 class="faq-question"><img src="assets/images/home-1/question.png" alt="">#2 How involved do I need to be in the project? ?
+							</h2>
+							<div class="faq-answer">
+								<div class="desc">
+									We value your input and encourage collaboration throughout the project. 
+									We’ll check in at key stages for feedback, 
+									but our team handles the heavy lifting to make the process smooth and hassle-free for you.
+								</div>
+							</div>
+						</div>
+						<div class="faq-singular">
+							<h2 class="faq-question"><img src="assets/images/home-1/question.png" alt="">#3 What happens if I need support after the website launch? ?
+							</h2>
+							<div class="faq-answer">
+								<div class="desc">
+									We’re here to help even after your website goes live. 
+									We offer ongoing support and maintenance packages to ensure your site remains up-to-date and running smoothly.
+								</div>
+							</div>
+						</div>
+						<div class="faq-singular">
+							<h2 class="faq-question"><img src="assets/images/home-1/question.png" alt="">#4 How much do your services cost?
+							</h2>
+							<div class="faq-answer">
+								<div class="desc">
+									Our pricing depends on the specific needs and requirements of your project.
+									 After understanding your vision, we’ll provide a customized quote based on the services you need.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- fin FaQs-->
+	<!--==================================================-->
+
+
+
+	<!--==================================================-->
+	<!-- temognages -->
+	<!--==================================================-->
+	<div class="testimonial-area style-one">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<div class="section-title center style-one">
+						<h4>Testimonial</h4>
+						<h1>Customer’s Feedback</h1>
+						<h1>About Our Services</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="testi-list-1 owl-carousel">
+					<div class="col-lg-12 text-center">
+						<div class="single-testimonial-box">
+							<div class="testi-desc">
+								<p>I’m so happy with my website! As a model, I needed a site that was both elegant and easy to update with my latest work. 
+									WebSnape completely understood my vision and created a beautiful platform that highlights my photos and portfolio.
+								 Highly recommend!</p>
+							</div>
+							<div class="testi-rating">
+								<ul>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+							</div>
+							<div class="testi-author">
+								<h4>Christ Denisa</h4>
+								<p>Instagram Model, @christ_denisa</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 text-center">
+						<div class="single-testimonial-box">
+							<div class="testi-desc">
+								<p>WebSnape created an awesome website for me that totally fits my vibe as a DJ! They added a music player, photo gallery, and even a place for my event schedule.
+									 It’s really easy for my fans to find my mixes and stay updated. Since launching, I’ve seen a big increase in traffic and gig requests. Yvan really knows his stuff!</p>
+							</div>
+							<div class="testi-rating">
+								<ul>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+							</div>
+							<div class="testi-author">
+								<h4>DJ Joseph</h4>
+								<p>Professional DJ and model, @justdjjoseph</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 text-center">
+						<div class="single-testimonial-box">
+							<div class="testi-desc">
+								<p>WebSnape did an amazing job on my portfolio! As a student, I wanted a website that looked professional but also reflected my personality.
+									Yvan understood exactly what I needed and delivered a modern, sleek design that’s helped me stand out.
+									I’ve already received great feedback from professors and potential employers. Thank you, WebSnape!</p>
+							</div>
+							<div class="testi-rating">
+								<ul>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+							</div>
+							<div class="testi-author">
+								<h4>Briyan Laberge</h4>
+								<p>Bachelor student in Automotive Engineering and Mobility</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 text-center">
+						<div class="single-testimonial-box">
+							<div class="testi-desc">
+								<p>Working with WebSnape was a fantastic experience! They created a beautiful website that perfectly showcases my sweets, donuts, and cakes. 
+									The design is so vibrant and welcoming that my customers love browsing it! 
+									I highly recommend WebSnape to anyone looking to bring their business online.</p>
+							</div>
+							<div class="testi-rating">
+								<ul>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+							</div>
+							<div class="testi-author">
+								<h4>Diane</h4>
+								<p>Pastry cook, @les_saveurs_de_dianou</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- Fin temoignage-->
+	<!--==================================================-->
+
+
+
+
+	<!--==================================================-->
+	<!-- Footer start -->
+	<!--==================================================-->
+	<div class="footer-area style-one">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-logo">
+						<a href="index.html"><img src="assets/images/websnape.png" style="width: 150px;"
+								alt="logo websnape"></a>
+					</div>
+					<!-- ici mettre une mini description de websnape j'ai utilisé un lorem30 -->
+					<div class="footer-widget-desc">
+						<p>WebSnape brings your ideas to life with custom digital solutions.
+							 Whether you need a captivating website or seamless integrations, we’re here to elevate your brand with precision and creativity.
+							 Discover what we can do for you.</p>
+					</div>
+					<div class="WebSnape-button inner-style">
+						<a href="#">Discover More<i class="bi bi-arrow-right-short"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6">
+					<div class="footer-widget-content">
+						<div class="footer-widget-title">
+							<h4>Company</h4>
+						</div>
+						<div class="footer-widget-menu">
+							<ul>
+
+								<li><a href="#"><i class="bi bi-arrow-right-circle"></i>Home</a></li>
+								<li><a href="service.html"><i class="bi bi-arrow-right-circle"></i>Services</a></li>
+								<!-- <li><a href="service.html">Service</a></li> -->
+								<li><a href="about.html"><i class="bi bi-arrow-right-circle"></i>About Us</a></li>
+								<li><a href="faqs.html"><i class="bi bi-arrow-right-circle"></i>Faqs</a></li>
+								<li><a href="contact.html"><i class="bi bi-arrow-right-circle"></i>Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-widget-content">
+						<div class="footer-widget-title">
+							<h4>Our Services</h4>
+						</div>
+						<div class="footer-widget-menu">
+							<ul>
+								<li><a href="#"><i class="bi bi-arrow-right-circle"></i>IT Solutions</a></li>
+								<li><a href="#"><i class="bi bi-arrow-right-circle"></i>App Development</a></li>
+								<li><a href="#"><i class="bi bi-arrow-right-circle"></i>Overhaul and optimization</a>
+								</li>
+								<li><a href="#"><i class="bi bi-arrow-right-circle"></i>API's Integration</a></li>
+								<li><a href="#"><i class="bi bi-arrow-right-circle"></i>UI/UX Design</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-widget-content">
+						<div class="footer-widget-title">
+							<h4>Newsletter</h4>
+						</div>
+						<p class="f-desc-2">Subscribe our Latest Newsletter</p>
+						<form action="#">
+							<div class="footer-newslatter-box">
+								<input type="text" name="Email" placeholder="Enter Your E-Mail" required>
+								<button type="submit">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-center">
+				<div class="footer-bottom-area">
+					<div class="row">
+						<div class="col-lg-6 col-md-6">
+							<div class="footer-bottom-content">
+								<p>© 2024 WebSnape. Designed By Eltsine NJITCHOUANG</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="footer-botton-social-icon">
+								<ul>
+									<li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+									<li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--==================================================-->
+	<!-- Footer Stop-->
+	<!--==================================================-->
+
+
+	<!--==================================================-->
+	<!-- Search bar-->
+	<!--==================================================-->
+	<div class="search-popup">
+		<button class="close-search style-two"><span class="flaticon-multiply"><i
+					class="far fa-times-circle"></i></span></button>
+		<button class="close-search"><i class="bi bi-arrow-up"></i></button>
+		<form method="post" action="#">
+			<div class="form-group">
+				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</div>
+		</form>
+	</div>
+	<!--==================================================-->
+	<!-- Fin Recherche-->
+	<!--==================================================-->
+
+
+	<!--==================================================-->
+	<!-- Scroll Up Start -->
+	<!--==================================================-->
+	<div class="prgoress_indicator active-progress">
+		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+				style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 212.78;">
+			</path>
+		</svg>
+	</div>
+	<!--==================================================-->
+	<!-- Scroll up en d-->
+	<!--==================================================-->
+
+
+
+
+
+
+
+	<!-- jquery js -->
+	<script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- carousel js -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- animated-text js -->
+	<script src="assets/js/animated-text.js"></script>
+	<!-- wow js -->
+	<script src="assets/js/wow.js"></script>
+	<!-- ajax-mail js -->
+	<script src="assets/js/ajax-mail.js"></script>
+	<!-- imagesloaded js -->
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<!-- venobox js -->
+	<script src="venobox/venobox.js"></script>
+	<!--  animated-text js -->
+	<script src="assets/js/animated-text.js"></script>
+	<!-- venobox min js -->
+	<script src="venobox/venobox.min.js"></script>
+	<!-- jquery meanmenu js -->
+	<script src="assets/js/jquery.meanmenu.js"></script>
+	<!-- theme js -->
+	<script src="assets/js/theme.js"></script>
+	<!-- Cousom carousel js -->
+	<script src="assets/js/coustom-carousel.js"></script>
+	<script src="assets/js/scroll-up.js"></script>
+
 </body>
+
 </html>
